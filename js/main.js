@@ -1,40 +1,29 @@
 //alert("existe");
 $(document).ready(function() {
-	var dibujarGifs = function(data){
-		var gif = "";
-		var url = "";
-		data.forEach(function(element) {
-			gif = element.images.downsized_large.url;
-			url = element.bitly_gif_url;
-			$("#elementos").append(armarTemplate(gif,url));
-		});
-	}
-	var armarTemplate = function(gif,url) {
-		var t = "<div class='elemento'><img src='" + gif + "'/><a href='" + url + "'>Ver más</a></div>"
-		return t;
-	}
-	var ajaxGif = function(gif){
-		$.ajax({
-			url: "https://api.giphy.com/v1/gifs/search",
-			type: "GET",
-			datatype: "json",
-			data : {
-				q : gif,
-				api_key : "dc6zaTOxFJmzC"
-			}
+	/**/
+	$.get("http://pokeapi.co/api/v2/pokedex/1/", function(x) {
+		console.log(x);
+		// array 721
+		x.pokemon_entries.forEach(function(element){
+			// elemento
+			console.log(element.pokemon_species.name[0]);
+			$(".pokemon").append("<div class='elemento'>" + element.pokemon_species.name + "</div>")
 		})
-		.done(function(response) {
-			console.log(response);
-			dibujarGifs(response.data);
-		})
-		.fail(function() {
-			console.log("error");
-		});
-	}
-	$("#buscar-gif").click(function(event) {
-		console.log("Entro");
-		$("#elementos").empty();
-		var gif = $("#gif-text").val();
-		ajaxGif(gif);
 	});
+	/*ajax
+	$.ajax({
+		url: '/path/to/file',
+		type: 'default GET (Other values: POST)',
+		dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+		data: {param1: 'value1'},
+	})
+	.done(function() {
+		console.log("success");
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});*/
 });
