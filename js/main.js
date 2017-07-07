@@ -7,11 +7,16 @@ $(document).ready(function() {
 		// array 721
 		x.pokemon_entries.forEach(function(element, i){
 			// elemento
-			console.log(element.pokemon_species.name[0]);
+			//console.log(element.pokemon_species.name[0]);
 			var numero = i + 1;
-			$(".pokemon").append("<div class='elemento'><img src='http://pokeapi.co/media/img/" + numero + ".png'>" + element.pokemon_species.name + "</div>")
+			$(".pokemon").append("<div class='elemento'><a href='#' id='modal" + numero + "'><img src='http://pokeapi.co/media/img/" + numero + ".png'>" + element.pokemon_species.name + "</a></div>")
+			//$(this).addClass("parrafo-box");
 			// http://pokeapi.co/media/img/3.png working img
 			//$(".pokemon").append("<img src='http://pokeapi.co/media/img/" + numero + ".png'>")
+			$("#modal" + numero).click(function() {
+				console.log("existe" + numero);
+				$('#myModal').modal('show')
+			});
 		})
 	});
 });
