@@ -15,7 +15,9 @@ $(document).ready(function() {
 			//$(".pokemon").append("<img src='http://pokeapi.co/media/img/" + numero + ".png'>")
 			$("#modal" + numero).click(function() {
 				console.log("existe" + numero);
-				$('#myModal').modal('show')
+				$("#myModal").modal("show");
+				$( "h2" ).remove( ".titulo" );
+				$(".modal-title").append("<h2 class='titulo'>" + element.pokemon_species.name + "</h2>");
 			});
 		})
 	});
