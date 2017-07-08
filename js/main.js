@@ -21,6 +21,10 @@ $(document).ready(function() {
 				$( "img" ).remove( "#modal-img" );
 				$(".modal-body").append("<img class='img-responsive' id='modal-img' src='http://pokeapi.co/media/img/" + numero + ".png'>");
 				
+				$.get("https://pokeapi.co/api/v2/pokemon-species/1/", function(y) {
+					// segundo recorrido de ajax
+						console.log(y);
+				});
 			});
 		})
 	});
