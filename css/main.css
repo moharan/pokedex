@@ -1,12 +1,37 @@
 body {
 	font-family: "Raleway", sans-serif;
+	color: #ba5e49;
+}
+a, a:hover {
+ text-decoration: none;
+ color: #646464;
+ font-weight: bold;
+ text-align: center;
+}
+.main {
+	color: #e84848;
 }
 .elemento {
-	background-color: white;
-	width: 100%;
-	height: 100px;
-	text-align: center;
+	display: inline-block;
+	margin:26px;
+	padding: 5px;
+	width: 130px;
+	height: 170px;
+	background-color: whitesmoke;
 }
 .titulo {
 	text-align: center;
+	color: #666;
+}
+.modal-content {
+    position: relative;
+    background-color: #edecec;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
 }

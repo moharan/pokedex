@@ -9,7 +9,7 @@ $(document).ready(function() {
 			// elemento
 			//console.log(element.pokemon_species.name[0]);
 			var numero = i + 1;
-			$(".pokemon").append("<div class='elemento'><a href='#' id='modal" + numero + "'><img src='http://pokeapi.co/media/img/" + numero + ".png'>" + element.pokemon_species.name + "</a></div>")
+			$(".pokemon").append("<div class='elemento text-center'><a href='#' id='modal" + numero + "'><img class='img-responsive' src='http://pokeapi.co/media/img/" + numero + ".png'>" + element.pokemon_species.name + "</a></div>")
 			//$(this).addClass("parrafo-box");
 			// http://pokeapi.co/media/img/3.png working img
 			//$(".pokemon").append("<img src='http://pokeapi.co/media/img/" + numero + ".png'>")
@@ -18,6 +18,9 @@ $(document).ready(function() {
 				$("#myModal").modal("show");
 				$( "h2" ).remove( ".titulo" );
 				$(".modal-title").append("<h2 class='titulo'>" + element.pokemon_species.name + "</h2>");
+				$( "img" ).remove( "#modal-img" );
+				$(".modal-body").append("<img class='img-responsive' id='modal-img' src='http://pokeapi.co/media/img/" + numero + ".png'>");
+				
 			});
 		})
 	});

@@ -5,17 +5,17 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
 	body {
-	background-color: #ccc;
+	background-color: #fff;
 	}
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
 	body {
-	background-color: #999;
+	background-color: #fff;
 	}
 }
 @media only screen and (min-width: 1px) and (max-width: 480px) {
 	body {
-	background-color: #666;
+	background-color: #fff;
 	}
 }
 
