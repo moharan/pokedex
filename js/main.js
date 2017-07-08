@@ -17,7 +17,7 @@ $(document).ready(function() {
 				$( "h2" ).remove( ".titulo" );
 				$(".modal-title").append("<h2 class='titulo'>" + element.pokemon_species.name + "</h2>");
 				$( "img" ).remove( "#modal-img" );
-				$(".modal-body").append("<img class='img-responsive' id='modal-img' src='http://pokeapi.co/media/img/" + numero + ".png'>");
+				$(".modal-body").append("<img class='img-responsive' id='modal-img' src='https://pokeapi.co/media/img/" + numero + ".png'>");
 				// información modal
 				$.get("https://pokeapi.co/api/v2/pokemon-species/1/", function(y) {
 					// segundo recorrido de ajax
